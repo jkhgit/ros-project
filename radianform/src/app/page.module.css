@@ -4,7 +4,7 @@
   --color-gray-border: rgb(226 232 240);
   --color-accent: #6366f1;
   --outline-color: #e9e9e9;
-  --calendar-icon-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%);
+  --calendar-icon-filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%);
   --button-default: #64748b;
   
   /* Theme colors */
@@ -102,6 +102,10 @@
 .defaultInput[type="date"]::-webkit-datetime-edit,
 .defaultInput[type="date"]::-webkit-calendar-picker-indicator {
   font-family: inherit;
+}
+
+.defaultInput[type="date"]::-webkit-calendar-picker-indicator {
+  filter: var(--calendar-icon-filter);
 }
 
 .defaultInput[type="number"]::-webkit-inner-spin-button,
