@@ -15,6 +15,7 @@
   box-shadow: 0 1px 3px rgba(0,0,0,0.12);
   overflow: hidden;
   margin-bottom: 20px;
+  height: calc(100vh - 100px); /* Add fixed height for container */
 }
 
 /* Section Styles */
@@ -158,14 +159,47 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1366px) {
+  .sectionsContainer {
+    height: calc(100vh - 80px);
+  }
+
+  .section {
+    height: calc(100vh - 200px);
+  }
+
+  .userCard {
+    padding: 8px 12px;
+  }
+
+  .userCard h3 {
+    font-size: 0.9em;
+  }
+
+  .userCard p {
+    font-size: 0.8em;
+  }
+
+  .heading1 {
+    font-size: 1.1em;
+    padding: 15px 15px 0 15px;
+  }
+
+  .sectionContent, .userGrid {
+    gap: 12px;
+    padding: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .sectionsContainer {
     grid-template-columns: 1fr;
     gap: 20px;
+    height: auto;
   }
 
   .section {
-    height: 400px;
+    height: 500px;
     border-right: none;
     border-bottom: 1px solid var(--color-gray-border);
   }

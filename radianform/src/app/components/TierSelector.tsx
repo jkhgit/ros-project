@@ -1,4 +1,5 @@
 // @ts-nocheck
+"use client";
 import Image from "next/image";
 import styles from "../page.module.css";
 import NumberFlow from '@number-flow/react';
